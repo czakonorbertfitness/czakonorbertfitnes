@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroAsset from "@/assets/20260806_075744.jpg.asset.json";
+import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
 import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
@@ -75,7 +75,7 @@ function Index() {
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
             src={heroAsset.url}
-            alt="Czakó Norbert személyi edző a gépes evezés közben a Peak Gymben"
+            alt="Czakó Norbert személyi edző a fekvenyomó állványnál a Peak Gymben"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
