@@ -1,10 +1,5 @@
 import { Link } from "@tanstack/react-router";
 
-const navLinks = [
-  { to: "/", label: "Kezdőlap" },
-  { to: "/edzesek", label: "Edzések" },
-  { to: "/kapcsolat", label: "Kapcsolat" },
-] as const;
 
 export function SiteHeader() {
   return (
@@ -16,19 +11,10 @@ export function SiteHeader() {
             Peak Gym Aréna · Budapest
           </span>
         </Link>
-        <nav className="flex items-center gap-6 text-sm">
-          {navLinks.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              activeProps={{ className: "text-primary" }}
-              className="hidden text-muted-foreground transition-colors hover:text-foreground sm:inline"
-            >
-              {l.label}
-            </Link>
-          ))}
+        <nav className="flex items-center text-sm">
           <Link
-            to="/kapcsolat"
+            to="/"
+            hash="kapcsolat"
             className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Időpont

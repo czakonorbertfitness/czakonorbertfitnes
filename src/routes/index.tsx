@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
 import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
@@ -55,7 +56,26 @@ const boundaryList = [
   "Illegális szerek használata vagy alkalmazása",
 ];
 
+const packages = [
+  {
+    title: "Személyi edzés",
+    desc: "Egy az egyben edzés a Peak Gym Arénában, teljes technikai felügyelettel.",
+    points: ["60 perces alkalom", "Egyénre szabott terv", "Folyamatos korrekció"],
+  },
+  {
+    title: "Páros edzés",
+    desc: "Barátoddal vagy pároddal, közös tempóban, megosztott költséggel.",
+    points: ["60 perces alkalom", "Két fő", "Közös motiváció"],
+  },
+  {
+    title: "Online edzésterv",
+    desc: "Havi terv és videós technikaellenőrzés, ha nem tudsz bejárni.",
+    points: ["Havi programozás", "Videós visszajelzés", "Heti egyeztetés"],
+  },
+];
+
 function Index() {
+  const [sent, setSent] = useState(false);
   return (
     <div className="min-h-screen">
       <SiteHeader />
@@ -74,13 +94,15 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              to="/kapcsolat"
+              to="/"
+              hash="kapcsolat"
               className="rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               Első alkalom egyeztetése
             </Link>
             <Link
-              to="/edzesek"
+              to="/"
+              hash="edzesek"
               className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
               Edzésformák
@@ -156,6 +178,47 @@ function Index() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="edzesek" className="border-y border-border/60 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-primary">Edzésformák</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
+              A célodhoz illő keret
+            </h2>
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              Mindegyik forma ugyanarra épül: pontos technika, mérhető haladás, tartható rutin.
+              Csak a keret más.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            {packages.map((p) => (
+              <div key={p.title} className="flex flex-col rounded-sm border border-border bg-background p-8">
+                <h3 className="font-display text-3xl">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+                <ul className="mt-6 space-y-2 text-sm">
+                  {p.points.map((pt) => (
+                    <li key={pt} className="flex gap-3">
+                      <span className="text-primary" aria-hidden="true">—</span>
+                      <span className="text-muted-foreground">{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/"
+                  hash="kapcsolat"
+                  className="mt-8 inline-block rounded-sm border border-primary px-5 py-2.5 text-center text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                >
+                  Érdekel
+                </Link>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-sm text-muted-foreground">
+            Az árakról és a szabad időpontokról szívesen adok tájékoztatást — keress bátran.
+          </p>
         </div>
       </section>
 
