@@ -52,7 +52,7 @@ const boundaryList = [
   "Gyors, erőfeszítés nélküli átalakulás",
   "Orvosi vagy gyógytornászati rehabilitáció",
   "Versenydiéta vagy extrém színpadi felkészítés",
-  "Olyan terv, amit a hétköznapjaidba nem lehet beilleszteni",
+  "Illegális szerek használata vagy alkalmazása",
 ];
 
 function Index() {
