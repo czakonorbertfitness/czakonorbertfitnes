@@ -40,6 +40,21 @@ const pillars = [
   },
 ];
 
+const supportList = [
+  "Erőfejlesztés és izomépítés",
+  "Alakformálás és zsírcsökkentés",
+  "Kezdő edzőtermi rutin felépítése",
+  "Szabadsúlyos alapgyakorlatok technikája",
+  "Tartható, személyre szabott edzésterv",
+];
+
+const boundaryList = [
+  "Gyors, erőfeszítés nélküli átalakulás",
+  "Orvosi vagy gyógytornászati rehabilitáció",
+  "Versenydiéta vagy extrém színpadi felkészítés",
+  "Olyan terv, amit a hétköznapjaidba nem lehet beilleszteni",
+];
+
 function Index() {
   return (
     <div className="min-h-screen">
