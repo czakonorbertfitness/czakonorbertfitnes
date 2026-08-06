@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Czakó Norbert — Személyi edző, Peak Gym Budapest" },
+      { title: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
       {
         name: "description",
         content:
-          "Személyi edzés Budapesten a Peak Gymben. Erő, alakformálás, mozgásminta-javítás Czakó Norberttel.",
+          "Személyi edzés Budapesten a Peak Gym Arénában. Erő, alakformálás, mozgásminta-javítás Czakó Norberttel",
       },
       { name: "author", content: "Czakó Norbert" },
       { property: "og:type", content: "website" },

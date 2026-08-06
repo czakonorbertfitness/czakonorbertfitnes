@@ -5,16 +5,16 @@ import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 export const Route = createFileRoute("/kapcsolat")({
   head: () => ({
     meta: [
-      { title: "Kapcsolat — Czakó Norbert személyi edző, Budapest" },
+      { title: "Kapcsolat — Czakó Norbert, Peak Gym Aréna" },
       {
         name: "description",
         content:
-          "Vedd fel velem a kapcsolatot személyi edzés ügyében. Peak Gym, Budapest — írj néhány sort a céljaidról.",
+          "Vedd fel velem a kapcsolatot személyi edzés ügyében. Peak Gym Aréna, Budapest — írj néhány sort a céljaidról.",
       },
-      { property: "og:title", content: "Kapcsolat — Czakó Norbert" },
+      { property: "og:title", content: "Kapcsolat — Czakó Norbert, Peak Gym Aréna" },
       {
         property: "og:description",
-        content: "Időpontegyeztetés személyi edzésre a Peak Gymben, Budapesten.",
+        content: "Időpontegyeztetés személyi edzésre a Peak Gym Arénában, Budapesten.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ function Kapcsolat() {
           <dl className="mt-10 space-y-6 text-sm">
             <div>
               <dt className="text-xs uppercase tracking-[0.3em] text-primary">Helyszín</dt>
-              <dd className="mt-2 text-muted-foreground">Peak Gym, Budapest</dd>
+              <dd className="mt-2 text-muted-foreground">Peak Gym Aréna, Budapest</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-[0.3em] text-primary">Edző</dt>
