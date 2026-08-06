@@ -13,7 +13,7 @@ export function SiteHeader() {
         <Link to="/" className="flex flex-col leading-none">
           <span className="font-display text-2xl tracking-tight">Czakó Norbert</span>
           <span className="text-[0.65rem] uppercase tracking-[0.35em] text-muted-foreground">
-            Peak Gym · Budapest
+            Peak Gym Aréna · Budapest
           </span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
@@ -44,7 +44,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Czakó Norbert — személyi edző</p>
-        <p>Peak Gym, Budapest</p>
+        <p>Peak Gym Aréna, Budapest</p>
       </div>
     </footer>
   );

@@ -6,16 +6,16 @@ import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Czakó Norbert — Személyi edző, Peak Gym Budapest" },
+      { title: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
       {
         name: "description",
         content:
-          "Személyi edzés a budapesti Peak Gymben. Erőfejlesztés, alakformálás és technikaoktatás egyénre szabott terv alapján.",
+          "Személyi edzés a Peak Gym Arénában, Budapesten. Erőfejlesztés, alakformálás és technikaoktatás egyénre szabott terv alapján.",
       },
-      { property: "og:title", content: "Czakó Norbert — Személyi edző, Budapest" },
+      { property: "og:title", content: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
       {
         property: "og:description",
-        content: "Egyénre szabott személyi edzés a Peak Gymben, Budapesten.",
+        content: "Egyénre szabott személyi edzés a Peak Gym Arénában, Budapesten.",
       },
     ],
   }),
@@ -68,7 +68,7 @@ function Index() {
             <span className="block italic text-primary">a hétköznapokban is.</span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-            Czakó Norbert vagyok, személyi edző a budapesti Peak Gymben. Tiszta technikára,
+            Czakó Norbert vagyok, személyi edző a Peak Gym Arénában, Budapesten. Tiszta technikára,
             fokozatos terhelésre és tartható rutinra építek — nem gyors, hanem maradandó
             eredményre.
           </p>
@@ -90,7 +90,7 @@ function Index() {
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
             src={heroAsset.url}
-            alt="Czakó Norbert személyi edző a fekvenyomó állványnál a Peak Gymben"
+            alt="Czakó Norbert személyi edző a fekvenyomó állványnál a Peak Gym Arénában"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
@@ -163,14 +163,14 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <img
             src={rowAsset.url}
-            alt="Czakó Norbert a Viking Press gépnél a Peak Gymben"
+            alt="Czakó Norbert a Viking Press gépnél a Peak Gym Arénában"
             className="aspect-[4/3] w-full rounded-sm object-cover"
             loading="lazy"
           />
           <div>
             <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Évek óta kísérek klienseket a Peak Gymben — kezdőket, akik most állnak először
+              Évek óta kísérek klienseket a Peak Gym Arénában — kezdőket, akik most állnak először
               rúd mögé, és haladókat, akik megrekedtek egy szinten. Az edzéseim gerince a
               szabadsúlyos alapgyakorlatok pontos kivitelezése, köré épül minden más.
             </p>
