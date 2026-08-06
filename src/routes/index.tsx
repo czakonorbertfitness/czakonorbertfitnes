@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroAsset from "@/assets/20260806_075739.jpg.asset.json";
+import heroAsset from "@/assets/20260806_075744.jpg.asset.json";
 import rowAsset from "@/assets/20260806_075905.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
