@@ -40,6 +40,21 @@ const pillars = [
   },
 ];
 
+const supportList = [
+  "Erőfejlesztés és izomépítés",
+  "Alakformálás és zsírcsökkentés",
+  "Kezdő edzőtermi rutin felépítése",
+  "Szabadsúlyos alapgyakorlatok technikája",
+  "Tartható, személyre szabott edzésterv",
+];
+
+const boundaryList = [
+  "Gyors, erőfeszítés nélküli átalakulás",
+  "Orvosi vagy gyógytornászati rehabilitáció",
+  "Versenydiéta vagy extrém színpadi felkészítés",
+  "Olyan terv, amit a hétköznapjaidba nem lehet beilleszteni",
+];
+
 function Index() {
   return (
     <div className="min-h-screen">
@@ -94,6 +109,53 @@ function Index() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-y border-border/60 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-primary">Reális keretek</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
+              Amiben számíthatsz rám — és amiben nem
+            </h2>
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              Az edzés akkor működik igazán, ha őszintén látjuk, honnan indulunk és mi fér bele
+              hosszú távon.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-20">
+            <div className="border-t border-primary pt-6">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-display text-3xl">Tudok segíteni</h3>
+                <span className="text-2xl text-primary" aria-hidden="true">+</span>
+              </div>
+              <ul className="mt-6 space-y-4">
+                {supportList.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                    <span className="text-primary" aria-hidden="true">↗</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="border-t border-border pt-6">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-display text-3xl">Nem tudok segíteni</h3>
+                <span className="text-2xl text-muted-foreground" aria-hidden="true">−</span>
+              </div>
+              <ul className="mt-6 space-y-4">
+                {boundaryList.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                    <span className="text-muted-foreground" aria-hidden="true">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
