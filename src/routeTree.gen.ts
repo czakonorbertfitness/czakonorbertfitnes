@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EdzesekRouteImport } from './routes/edzesek'
+import { Route as KapcsolatRouteImport } from './routes/kapcsolat'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const EdzesekRoute = EdzesekRouteImport.update({
   path: '/edzesek',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KapcsolatRoute = KapcsolatRouteImport.update({
+  id: '/kapcsolat',
+  path: '/kapcsolat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/edzesek': typeof EdzesekRoute
+  '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/edzesek': typeof EdzesekRoute
+  '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/edzesek': typeof EdzesekRoute
+  '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/edzesek'
+  fullPaths: '/' | '/edzesek' | '/kapcsolat'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/edzesek'
-  id: '__root__' | '/' | '/edzesek'
+  to: '/' | '/edzesek' | '/kapcsolat'
+  id: '__root__' | '/' | '/edzesek' | '/kapcsolat'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EdzesekRoute: typeof EdzesekRoute
+  KapcsolatRoute: typeof KapcsolatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,13 +75,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EdzesekRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kapcsolat': {
+      id: '/kapcsolat'
+      path: '/kapcsolat'
+      fullPath: '/kapcsolat'
+      preLoaderRoute: typeof KapcsolatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EdzesekRoute: EdzesekRoute,
+  KapcsolatRoute: KapcsolatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
