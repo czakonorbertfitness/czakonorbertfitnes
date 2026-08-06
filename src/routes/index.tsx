@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/20260806_075744.jpg.asset.json";
-import rowAsset from "@/assets/20260806_075905.jpg.asset.json";
+import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 export const Route = createFileRoute("/")({
@@ -101,7 +101,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <img
             src={rowAsset.url}
-            alt="Evezés kábelgépen a Peak Gym edzőtermében"
+            alt="Czakó Norbert a Viking Press gépnél a Peak Gymben"
             className="aspect-[4/3] w-full rounded-sm object-cover"
             loading="lazy"
           />
