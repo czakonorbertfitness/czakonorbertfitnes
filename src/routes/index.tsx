@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/20260806_075744.jpg.asset.json";
-import rowAsset from "@/assets/20260806_075905.jpg.asset.json";
+import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 export const Route = createFileRoute("/")({
