@@ -75,7 +75,7 @@ function Index() {
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
             src={heroAsset.url}
-            alt="Czakó Norbert személyi edző edzés közben a Peak Gymben"
+            alt="Czakó Norbert személyi edző a gépes evezés közben a Peak Gymben"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
