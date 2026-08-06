@@ -101,7 +101,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <img
             src={rowAsset.url}
-            alt="Evezés kábelgépen a Peak Gym edzőtermében"
+            alt="Czakó Norbert a Viking Press gépnél a Peak Gymben"
             className="aspect-[4/3] w-full rounded-sm object-cover"
             loading="lazy"
           />
