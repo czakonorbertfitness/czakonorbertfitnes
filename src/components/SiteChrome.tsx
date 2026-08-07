@@ -7,9 +7,6 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex flex-col leading-none">
           <span className="font-display text-2xl tracking-tight">Czakó Norbert</span>
-          <span className="text-[0.65rem] uppercase tracking-[0.35em] text-muted-foreground">
-            Peak Gym Aréna · Budapest
-          </span>
         </Link>
         <nav className="flex items-center text-sm">
           <Link
