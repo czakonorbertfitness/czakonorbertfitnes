@@ -233,13 +233,15 @@ function Index() {
           <div>
             <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Évek óta kísérek klienseket a Peak Gym Arénában — kezdőket, akik most állnak először
-              rúd mögé, és haladókat, akik megrekedtek egy szinten. Az edzéseim gerince a
-              szabadsúlyos alapgyakorlatok pontos kivitelezése, köré épül minden más.
+              Jelentősen túlsúlyos voltam egészen érettségiig. Nem kötött le sem a foci, sem pedig
+              a kosárlabda, aztán az érettségi előtt egy évfolyamtársammal találkoztam, aki már
+              járt konditerembe. Elkezdtem vele edzeni, és ahogy láttam a saját átalakulásomat,
+              az motivációt adott minden egyes ismétléshez. Onnantól tudtam, hogy megtaláltam a
+              sportomat.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Hiszek abban, hogy a legjobb terv az, amit tényleg végig tudsz csinálni. Ezért
-              mindig a te tempódhoz, munkádhoz és regenerációdhoz igazítom a terhelést.
+              Kisebb-nagyobb kihagyásokkal ez egészen a mai napig kitart. Edzés nélkül már nem is
+              tudok létezni — annyira a mindennapommá vált.
             </p>
           </div>
         </div>
