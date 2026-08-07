@@ -63,11 +63,6 @@ const packages = [
     points: ["60 perces alkalom", "Egyénre szabott terv", "Folyamatos korrekció"],
   },
   {
-    title: "Páros edzés",
-    desc: "Barátoddal vagy pároddal, közös tempóban, megosztott költséggel.",
-    points: ["60 perces alkalom", "Két fő", "Közös motiváció"],
-  },
-  {
     title: "Online edzésterv",
     desc: "Havi terv és videós technikaellenőrzés, ha nem tudsz bejárni.",
     points: ["Havi programozás", "Videós visszajelzés", "Heti egyeztetés"],

@@ -9,12 +9,12 @@ export const Route = createFileRoute("/edzesek")({
       {
         name: "description",
         content:
-          "Személyi edzés, páros edzés és online edzésterv a Peak Gym Arénában, Budapesten. Válaszd ki a hozzád illő formát.",
+          "Személyi edzés és online edzésterv a Peak Gym Arénában, Budapesten. Válaszd ki a hozzád illő formát.",
       },
       { property: "og:title", content: "Edzésformák — Czakó Norbert" },
       {
         property: "og:description",
-        content: "Személyi, páros és online edzési lehetőségek a Peak Gym Arénában.",
+        content: "Személyi és online edzési lehetőségek a Peak Gym Arénában.",
       },
     ],
   }),
@@ -26,11 +26,6 @@ const packages = [
     title: "Személyi edzés",
     desc: "Egy az egyben edzés a Peak Gym Arénában, teljes technikai felügyelettel.",
     points: ["60 perces alkalom", "Egyénre szabott terv", "Folyamatos korrekció"],
-  },
-  {
-    title: "Páros edzés",
-    desc: "Barátoddal vagy pároddal, közös tempóban, megosztott költséggel.",
-    points: ["60 perces alkalom", "Két fő", "Közös motiváció"],
   },
   {
     title: "Online edzésterv",
