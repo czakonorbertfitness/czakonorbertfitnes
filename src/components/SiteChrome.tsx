@@ -22,12 +22,39 @@ export function SiteHeader() {
   );
 }
 
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/czakonorbertfitness",
+  instagram: "https://www.instagram.com/czakonorbertfitness/",
+};
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60">
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Czakó Norbert — személyi edző</p>
+        <nav className="flex items-center gap-6">
+          <a
+            href={SOCIAL_LINKS.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-primary"
+          >
+            Facebook
+          </a>
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-primary"
+          >
+            Instagram
+          </a>
+          <Link to="/adatvedelem" className="transition-colors hover:text-primary">
+            Adatvédelem
+          </Link>
+        </nav>
       </div>
     </footer>
   );
 }
+
