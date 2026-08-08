@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
 import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
+import { ContactForm } from "@/components/ContactForm";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 export const Route = createFileRoute("/")({
