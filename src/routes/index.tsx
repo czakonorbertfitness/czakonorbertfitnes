@@ -7,16 +7,16 @@ import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
+      { title: "Czakó Norbert — Személyi edző" },
       {
         name: "description",
         content:
-          "Személyi edzés a Peak Gym Arénában, Budapesten. Erőfejlesztés, alakformálás és technikaoktatás egyénre szabott terv alapján.",
+          "Egyénre szabott személyi edzés erőfejlesztéssel, alakformálással és technikaoktatással.",
       },
-      { property: "og:title", content: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
+      { property: "og:title", content: "Czakó Norbert — Személyi edző" },
       {
         property: "og:description",
-        content: "Egyénre szabott személyi edzés a Peak Gym Arénában, Budapesten.",
+        content: "Egyénre szabott személyi edzés mérhető haladással és tartható rutinnal.",
       },
     ],
   }),

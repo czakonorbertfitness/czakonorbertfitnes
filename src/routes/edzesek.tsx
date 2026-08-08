@@ -9,12 +9,12 @@ export const Route = createFileRoute("/edzesek")({
       {
         name: "description",
         content:
-          "Személyi edzés és online edzésterv a Peak Gym Arénában, Budapesten. Válaszd ki a hozzád illő formát.",
+          "Személyi edzés és online edzésterv. Válaszd ki a hozzád illő formát.",
       },
       { property: "og:title", content: "Edzésformák — Czakó Norbert" },
       {
         property: "og:description",
-        content: "Személyi és online edzési lehetőségek a Peak Gym Arénában.",
+        content: "Személyi és online edzési lehetőségek mérhető haladással.",
       },
     ],
   }),
