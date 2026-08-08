@@ -24,7 +24,7 @@ export const Route = createFileRoute("/edzesek")({
 const packages = [
   {
     title: "Személyi edzés",
-    desc: "Egy az egyben edzés a Peak Gym Arénában, teljes technikai felügyelettel.",
+    desc: "Egy az egyben edzés teljes technikai felügyelettel.",
     points: ["60 perces alkalom", "Egyénre szabott terv", "Folyamatos korrekció"],
   },
   {
@@ -52,7 +52,7 @@ function Edzesek() {
         <div className="relative min-h-[300px]">
           <img
             src={trainAsset.url}
-            alt="Czakó Norbert a Peak Gym Arénában, a fekvenyomó állványnál"
+            alt="Czakó Norbert a fekvenyomó állványnál"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />

@@ -37,10 +37,6 @@ function Kapcsolat() {
           </p>
           <dl className="mt-10 space-y-6 text-sm">
             <div>
-              <dt className="text-xs uppercase tracking-[0.3em] text-primary">Helyszín</dt>
-              <dd className="mt-2 text-muted-foreground">Peak Gym Aréna, Budapest</dd>
-            </div>
-            <div>
               <dt className="text-xs uppercase tracking-[0.3em] text-primary">Edző</dt>
               <dd className="mt-2 text-muted-foreground">Czakó Norbert</dd>
             </div>
