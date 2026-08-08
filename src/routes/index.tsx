@@ -254,7 +254,29 @@ function Index() {
                 <dt className="text-xs uppercase tracking-[0.3em] text-primary">Edző</dt>
                 <dd className="mt-2 text-muted-foreground">Czakó Norbert</dd>
               </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.3em] text-primary">Közösségi oldalak</dt>
+                <dd className="mt-2 flex gap-6 text-muted-foreground">
+                  <a
+                    href={SOCIAL_LINKS.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-primary"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href={SOCIAL_LINKS.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-primary"
+                  >
+                    Instagram
+                  </a>
+                </dd>
+              </div>
             </dl>
+
           </div>
 
           <ContactForm />
