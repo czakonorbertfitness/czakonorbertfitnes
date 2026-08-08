@@ -7,16 +7,16 @@ import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
+      { title: "Czakó Norbert — Személyi edző" },
       {
         name: "description",
         content:
-          "Személyi edzés a Peak Gym Arénában, Budapesten. Erőfejlesztés, alakformálás és technikaoktatás egyénre szabott terv alapján.",
+          "Egyénre szabott személyi edzés erőfejlesztéssel, alakformálással és technikaoktatással.",
       },
-      { property: "og:title", content: "Czakó Norbert — Személyi edző, Peak Gym Aréna" },
+      { property: "og:title", content: "Czakó Norbert — Személyi edző" },
       {
         property: "og:description",
-        content: "Egyénre szabott személyi edzés a Peak Gym Arénában, Budapesten.",
+        content: "Egyénre szabott személyi edzés mérhető haladással és tartható rutinnal.",
       },
     ],
   }),
@@ -59,7 +59,7 @@ const boundaryList = [
 const packages = [
   {
     title: "Személyi edzés",
-    desc: "Egy az egyben edzés a Peak Gym Arénában, teljes technikai felügyelettel.",
+    desc: "Egy az egyben edzés teljes technikai felügyelettel.",
     points: ["60 perces alkalom", "Egyénre szabott terv", "Folyamatos korrekció"],
   },
   {
@@ -83,9 +83,8 @@ function Index() {
             <span className="block italic text-primary">a hétköznapokban is.</span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-            Czakó Norbert vagyok, személyi edző a Peak Gym Arénában, Budapesten. Tiszta technikára,
-            fokozatos terhelésre és tartható rutinra építek — nem gyors, hanem maradandó
-            eredményre.
+            Czakó Norbert vagyok, személyi edző. Tiszta technikára, fokozatos terhelésre és tartható
+            rutinra építek — nem gyors, hanem maradandó eredményre.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -107,7 +106,7 @@ function Index() {
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
             src={heroAsset.url}
-            alt="Czakó Norbert személyi edző a fekvenyomó állványnál a Peak Gym Arénában"
+            alt="Czakó Norbert személyi edző a fekvenyomó állványnál"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
@@ -221,7 +220,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <img
             src={rowAsset.url}
-            alt="Czakó Norbert a Viking Press gépnél a Peak Gym Arénában"
+            alt="Czakó Norbert a Viking Press gépnél"
             className="aspect-[4/3] w-full rounded-sm object-cover"
             loading="lazy"
           />
