@@ -258,48 +258,8 @@ function Index() {
             </dl>
           </div>
 
-          <form
-            className="space-y-5 rounded-sm border border-border bg-card p-8"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-          >
-            <div>
-              <label htmlFor="name" className="text-sm text-muted-foreground">Neved</label>
-              <input
-                id="name"
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="text-sm text-muted-foreground">E-mail vagy telefon</label>
-              <input
-                id="email"
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <div>
-              <label htmlFor="msg" className="text-sm text-muted-foreground">Célod, tapasztalatod</label>
-              <textarea
-                id="msg"
-                rows={5}
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Üzenet küldése
-            </button>
-            {sent && (
-              <p className="text-sm text-primary">Köszönöm az üzenetet! Hamarosan keresni foglak.</p>
-            )}
-          </form>
+          <ContactForm />
+
         </div>
       </section>
 

@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdatvedelemRouteImport } from './routes/adatvedelem'
 import { Route as EdzesekRouteImport } from './routes/edzesek'
 import { Route as KapcsolatRouteImport } from './routes/kapcsolat'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdatvedelemRoute = AdatvedelemRouteImport.update({
+  id: '/adatvedelem',
+  path: '/adatvedelem',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EdzesekRoute = EdzesekRouteImport.update({
@@ -31,30 +37,34 @@ const KapcsolatRoute = KapcsolatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/adatvedelem': typeof AdatvedelemRoute
   '/edzesek': typeof EdzesekRoute
   '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/adatvedelem': typeof AdatvedelemRoute
   '/edzesek': typeof EdzesekRoute
   '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/adatvedelem': typeof AdatvedelemRoute
   '/edzesek': typeof EdzesekRoute
   '/kapcsolat': typeof KapcsolatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/edzesek' | '/kapcsolat'
+  fullPaths: '/' | '/adatvedelem' | '/edzesek' | '/kapcsolat'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/edzesek' | '/kapcsolat'
-  id: '__root__' | '/' | '/edzesek' | '/kapcsolat'
+  to: '/' | '/adatvedelem' | '/edzesek' | '/kapcsolat'
+  id: '__root__' | '/' | '/adatvedelem' | '/edzesek' | '/kapcsolat'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdatvedelemRoute: typeof AdatvedelemRoute
   EdzesekRoute: typeof EdzesekRoute
   KapcsolatRoute: typeof KapcsolatRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adatvedelem': {
+      id: '/adatvedelem'
+      path: '/adatvedelem'
+      fullPath: '/adatvedelem'
+      preLoaderRoute: typeof AdatvedelemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/edzesek': {
@@ -87,19 +104,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdatvedelemRoute: AdatvedelemRoute,
   EdzesekRoute: EdzesekRoute,
   KapcsolatRoute: KapcsolatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
