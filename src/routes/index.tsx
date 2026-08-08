@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
 import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
-import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { ContactForm } from "@/components/ContactForm";
+import { SiteFooter, SiteHeader, SOCIAL_LINKS } from "@/components/SiteChrome";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,7 +70,6 @@ const packages = [
 ];
 
 function Index() {
-  const [sent, setSent] = useState(false);
   return (
     <div className="min-h-screen">
       <SiteHeader />
@@ -255,51 +254,33 @@ function Index() {
                 <dt className="text-xs uppercase tracking-[0.3em] text-primary">Edző</dt>
                 <dd className="mt-2 text-muted-foreground">Czakó Norbert</dd>
               </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.3em] text-primary">Közösségi oldalak</dt>
+                <dd className="mt-2 flex gap-6 text-muted-foreground">
+                  <a
+                    href={SOCIAL_LINKS.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-primary"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href={SOCIAL_LINKS.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-primary"
+                  >
+                    Instagram
+                  </a>
+                </dd>
+              </div>
             </dl>
+
           </div>
 
-          <form
-            className="space-y-5 rounded-sm border border-border bg-card p-8"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-          >
-            <div>
-              <label htmlFor="name" className="text-sm text-muted-foreground">Neved</label>
-              <input
-                id="name"
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="text-sm text-muted-foreground">E-mail vagy telefon</label>
-              <input
-                id="email"
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <div>
-              <label htmlFor="msg" className="text-sm text-muted-foreground">Célod, tapasztalatod</label>
-              <textarea
-                id="msg"
-                rows={5}
-                required
-                className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Üzenet küldése
-            </button>
-            {sent && (
-              <p className="text-sm text-primary">Köszönöm az üzenetet! Hamarosan keresni foglak.</p>
-            )}
-          </form>
+          <ContactForm />
+
         </div>
       </section>
 
