@@ -33,30 +33,18 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Check Pages output
+      - name: Check build output
         run: |
-          echo "=== .output/public ==="
-          ls -la .output/public
-          echo "=== Files ==="
+          echo "=== PUBLIC FILES ==="
           find .output/public -maxdepth 2 -type f -print
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./.output/public
+          echo "=== SERVER FILES ==="
+          find .output/server -maxdepth 2 -type f -print
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy
+        run: echo "Build diagnostic completed"
