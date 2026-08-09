@@ -36,7 +36,10 @@ const inputClass =
   "mt-2 w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm outline-none focus:border-primary";
 
 export function ContactForm() {
+  const send = useServerFn(sendContactMail);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Errors>({});
   const [values, setValues] = useState({
     name: "",
@@ -46,18 +49,19 @@ export function ContactForm() {
     consent: false,
   });
 
-  const [a, b] = useMemo(
-    () => [Math.floor(Math.random() * 8) + 2, Math.floor(Math.random() * 8) + 2],
-    [],
-  );
+  const [[a, b], setPair] = useState<[number, number]>([3, 4]);
+  useEffect(() => {
+    setPair([Math.floor(Math.random() * 8) + 2, Math.floor(Math.random() * 8) + 2]);
+  }, []);
 
   function set<K extends keyof typeof values>(key: K, value: (typeof values)[K]) {
     setValues((prev) => ({ ...prev, [key]: value }));
     setErrors((prev) => ({ ...prev, [key]: undefined }));
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSendError(null);
     const result = schema.safeParse(values);
     const next: Errors = {};
     if (!result.success) {
@@ -71,8 +75,29 @@ export function ContactForm() {
     }
     setErrors(next);
     if (Object.keys(next).length > 0) return;
-    setSent(true);
+
+    setSending(true);
+    try {
+      const res = await send({
+        data: {
+          name: values.name.trim(),
+          contact: values.contact.trim(),
+          message: values.message.trim(),
+        },
+      });
+      if (res.ok) {
+        setSent(true);
+        setValues({ name: "", contact: "", message: "", captcha: "", consent: false });
+      } else {
+        setSendError(res.error ?? "Nem sikerült elküldeni az üzenetet.");
+      }
+    } catch {
+      setSendError("Nem sikerült elküldeni az üzenetet. Próbáld újra később.");
+    } finally {
+      setSending(false);
+    }
   }
+
 
   return (
     <form className="space-y-5 rounded-sm border border-border bg-card p-8" onSubmit={onSubmit} noValidate>
