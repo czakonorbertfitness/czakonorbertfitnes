@@ -99,7 +99,15 @@ export function ContactForm() {
   }
 
 
+  const requiredFieldsFilled =
+    values.name.trim().length > 0 &&
+    values.contact.trim().length > 0 &&
+    values.message.trim().length > 0 &&
+    values.captcha.trim().length > 0 &&
+    values.consent;
+
   return (
+
     <form className="space-y-5 rounded-sm border border-border bg-card p-8" onSubmit={onSubmit} noValidate>
       <div>
         <label htmlFor="name" className="text-sm text-muted-foreground">
