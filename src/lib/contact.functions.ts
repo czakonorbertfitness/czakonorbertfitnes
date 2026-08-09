@@ -10,8 +10,7 @@ const inputSchema = z.object({
 export const sendContactMail = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => inputSchema.parse(data))
   .handler(async ({ data }) => {
-    const isEmail = /^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$/.test(data.contact);
-    const fromEmail = isEmail ? data.contact : "noreply@czakonorbertfitnes.hu";
+    const fromEmail = "czakonorbert88@gmail.com";
     const subject = `Új kapcsolatfelvétel — ${data.name}`;
     const body = `Név: ${data.name}\nElérhetőség: ${data.contact}\n\nÜzenet:\n${data.message}`;
 
