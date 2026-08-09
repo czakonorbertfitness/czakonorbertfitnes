@@ -1,14 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
-import { z } from "zod";
-
-const inputSchema = z.object({
-  name: z.string().trim().min(2).max(100),
-  contact: z.string().trim().min(5).max(255),
-  message: z.string().trim().min(10).max(1000),
-});
+import { contactInputSchema } from "@/lib/contact.schema";
 
 export const sendContactMail = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => inputSchema.parse(data))
+  .inputValidator((data: unknown) => contactInputSchema.parse(data))
   .handler(async ({ data }) => {
     const fromEmail = "czakonorbert88@gmail.com";
     const subject = `Új kapcsolatfelvétel — ${data.name}`;
