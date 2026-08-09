@@ -35,28 +35,15 @@ jobs:
 
       - name: Check build output
         run: |
-          echo "Build output:"
-          find . -maxdepth 3 -type d \( -name "dist" -o -name ".output" -o -name "build" \) -print
-          echo "Root files:"
+          echo "=== ROOT ==="
           ls -la
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+          echo "=== DIRECTORIES ==="
+          find . -maxdepth 3 -type d -print
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy
+        run: echo "Build diagnostic completed"
