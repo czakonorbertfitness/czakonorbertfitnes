@@ -1,6 +1,8 @@
-import { Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { Link, useServerFn } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { z } from "zod";
+import { sendContactMail } from "@/lib/contact.functions";
+
 
 const schema = z.object({
   name: z
