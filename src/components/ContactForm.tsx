@@ -194,8 +194,8 @@ export function ContactForm() {
 
       <button
         type="submit"
-        disabled={sending}
-        className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
+        disabled={sending || !requiredFieldsFilled}
+        className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {sending ? "Küldés…" : "Üzenet küldése"}
       </button>
