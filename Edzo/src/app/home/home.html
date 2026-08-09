@@ -1,0 +1,461 @@
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="logo" type="button" (click)="scrollTo('top')">
+        Czakó Norbert
+      </button>
+
+      <button
+        class="appointment-button"
+        type="button"
+        (click)="scrollTo('kapcsolat')"
+      >
+        Időpont
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Személyi edző</p>
+
+          <h1>
+            Erő, ami kitart
+            <span>a hétköznapokban is.</span>
+          </h1>
+
+          <p class="hero-description">
+            Czakó Norbert vagyok, személyi edző. Tiszta technikára,
+            fokozatos terhelésre és tartható rutinra építek — nem gyors,
+            hanem maradandó eredményre.
+          </p>
+
+          <div class="hero-actions">
+            <button
+              type="button"
+              class="button button-primary"
+              (click)="scrollTo('kapcsolat')"
+            >
+              Első alkalom egyeztetése
+            </button>
+
+            <button
+              type="button"
+              class="button button-outline"
+              (click)="scrollTo('edzesek')"
+            >
+              Edzésformák
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="/hero.jpg"
+            alt="Czakó Norbert személyi edző a fekvenyomó állványnál"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÓLAM -->
+    <section class="about section-card">
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img
+            src="/training.jpg"
+            alt="Czakó Norbert a Viking Press gépnél"
+          />
+        </div>
+
+        <div class="about-text">
+          <h2>Rólam</h2>
+
+          <p>
+            Jelentősen túlsúlyos voltam egészen érettségiig. Nem kötött le
+            sem a foci, sem pedig a kosárlabda, aztán az érettségi előtt
+            egy évfolyamtársammal találkoztam, aki már járt konditerembe.
+            Elkezdtem vele edzeni, és ahogy láttam a saját átalakulásomat,
+            az motivációt adott minden egyes ismétléshez. Onnantól tudtam,
+            hogy megtaláltam a sportomat.
+          </p>
+
+          <p>
+            Kisebb-nagyobb kihagyásokkal ez egészen a mai napig kitart.
+            Edzés nélkül már nem is tudok létezni — annyira a
+            mindennapommá vált.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOGYAN DOLGOZUNK -->
+    <section class="process section">
+      <div class="container">
+
+        <h2>Hogyan dolgozunk együtt</h2>
+
+        <div class="process-grid">
+
+          <article class="process-item">
+            <span class="number">01</span>
+            <h3>Felmérés</h3>
+            <p>
+              Mozgásminta, testösszetétel és célok átbeszélése az első
+              alkalommal.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">02</span>
+            <h3>Terv</h3>
+            <p>
+              Heti bontású edzésterv, ami illeszkedik a napirendedhez és
+              a terhelhetőségedhez.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">03</span>
+            <h3>Kivitelezés</h3>
+            <p>
+              Végigkísért edzések, folyamatos technikai korrekcióval és
+              progresszív terheléssel.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REALITÁS -->
+    <section class="reality section-card">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Reális keretek</p>
+
+          <h2>
+            Amiben számíthatsz rám —
+            és amiben nem
+          </h2>
+
+          <p>
+            Az edzés akkor működik igazán, ha őszintén látjuk, honnan
+            indulunk és mi fér bele hosszú távon.
+          </p>
+        </div>
+
+        <div class="reality-grid">
+
+          <div class="reality-column positive">
+            <div class="column-heading">
+              <h3>Tudok segíteni</h3>
+              <span>+</span>
+            </div>
+
+            <ul>
+              @for (item of supportList; track item) {
+                <li>
+                  <span>↗</span>
+                  {{ item }}
+                </li>
+              }
+            </ul>
+          </div>
+
+          <div class="reality-column negative">
+            <div class="column-heading">
+              <h3>Nem tudok segíteni</h3>
+              <span>−</span>
+            </div>
+
+            <ul>
+              @for (item of boundaryList; track item) {
+                <li>
+                  <span>—</span>
+                  {{ item }}
+                </li>
+              }
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDZÉSFORMÁK -->
+    <section id="edzesek" class="training section-card">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Edzésformák</p>
+
+          <h2>A célodhoz illő keret</h2>
+
+          <p>
+            Mindegyik forma ugyanarra épül: pontos technika, mérhető
+            haladás, tartható rutin. Csak a keret más.
+          </p>
+        </div>
+
+        <div class="training-grid">
+
+          <article class="training-card">
+            <h3>Személyi edzés</h3>
+
+            <p>
+              Egy az egyben edzés teljes technikai felügyelettel.
+            </p>
+
+            <ul>
+              <li>— <span>60 perces alkalom</span></li>
+              <li>— <span>Egyénre szabott terv</span></li>
+              <li>— <span>Folyamatos korrekció</span></li>
+            </ul>
+
+            <button
+              type="button"
+              class="card-button"
+              (click)="scrollTo('kapcsolat')"
+            >
+              Érdekel
+            </button>
+          </article>
+
+          <article class="training-card">
+            <h3>Online edzésterv</h3>
+
+            <p>
+              Havi terv és videós technikaellenőrzés, ha nem tudsz
+              bejárni.
+            </p>
+
+            <ul>
+              <li>— <span>Havi programozás</span></li>
+              <li>— <span>Videós visszajelzés</span></li>
+              <li>— <span>Heti egyeztetés</span></li>
+            </ul>
+
+            <button
+              type="button"
+              class="card-button"
+              (click)="scrollTo('kapcsolat')"
+            >
+              Érdekel
+            </button>
+          </article>
+
+        </div>
+
+        <p class="training-note">
+          Az árakról és a szabad időpontokról szívesen adok tájékoztatást
+          — keress bátran.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- KAPCSOLAT -->
+    <section id="kapcsolat" class="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+
+          <p class="eyebrow">Kapcsolat</p>
+
+          <h2>Kezdjük el</h2>
+
+          <p class="contact-intro">
+            Írd meg, mi a célod és mikor tudsz edzeni — egy napon belül
+            válaszolok, és egyeztetünk egy felmérő alkalmat.
+          </p>
+
+          <dl>
+
+            <div>
+              <dt>Edző</dt>
+              <dd>Czakó Norbert</dd>
+            </div>
+
+            <div>
+              <dt>Közösségi oldalak</dt>
+
+              <dd class="social-links">
+                <a
+                  href="https://www.facebook.com/czakonorbertfitness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+
+                <a
+                  href="https://www.instagram.com/czakonorbertfitness/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+        </div>
+
+        <!-- FORM -->
+        <form
+          class="contact-form"
+          (ngSubmit)="submitForm()"
+          #form="ngForm"
+        >
+
+          <div class="form-field">
+            <label for="name">
+              Neved <span>*</span>
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              [(ngModel)]="contact.name"
+              maxlength="100"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="contact">
+              E-mail vagy telefon <span>*</span>
+            </label>
+
+            <input
+              id="contact"
+              name="contact"
+              type="text"
+              [(ngModel)]="contact.contact"
+              maxlength="255"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="message">
+              Célod, tapasztalatod <span>*</span>
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              maxlength="1000"
+              [(ngModel)]="contact.message"
+            ></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="captcha">
+              Ember vagyok: mennyi
+              {{ captchaA }} + {{ captchaB }}?
+              <span>*</span>
+            </label>
+
+            <input
+              id="captcha"
+              name="captcha"
+              type="text"
+              inputmode="numeric"
+              maxlength="4"
+              [(ngModel)]="contact.captcha"
+            />
+          </div>
+
+          <label class="consent">
+            <input
+              type="checkbox"
+              name="consent"
+              [(ngModel)]="contact.consent"
+            />
+
+            <span>
+              Elolvastam és elfogadom az
+              <a href="/adatvedelem">
+                adatvédelmi nyilatkozatot
+              </a>,
+              és hozzájárulok az adataim kapcsolatfelvétel céljából
+              történő kezeléséhez.
+              <strong>*</strong>
+            </span>
+          </label>
+
+          @if (error) {
+            <p class="form-error">
+              {{ error }}
+            </p>
+          }
+
+          @if (sent) {
+            <p class="form-success">
+              Köszönöm az üzenetet! Hamarosan keresni foglak.
+            </p>
+          }
+
+          <button
+            type="submit"
+            class="submit-button"
+          >
+            Üzenet küldése
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p>
+        © {{ currentYear }} Czakó Norbert — személyi edző
+      </p>
+
+      <nav>
+        <a
+          href="https://www.facebook.com/czakonorbertfitness"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/czakonorbertfitness/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a href="/adatvedelem">
+          Adatvédelem
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+
+</div>
