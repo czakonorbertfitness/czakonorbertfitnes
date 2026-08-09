@@ -186,14 +186,18 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+        disabled={sending}
+        className="w-full rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        Üzenet küldése
+        {sending ? "Küldés…" : "Üzenet küldése"}
       </button>
+
+      {sendError && <p className="text-sm text-destructive">{sendError}</p>}
 
       {sent && (
         <p className="text-sm text-primary">Köszönöm az üzenetet! Hamarosan keresni foglak.</p>
       )}
+
     </form>
   );
 }
