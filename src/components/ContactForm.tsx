@@ -3,8 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { sendContactMail } from "@/lib/contact.functions";
-
-
+import { contactFieldSchema } from "@/lib/contact.schema";
 
 const schema = z.object({
   name: z
@@ -12,15 +11,7 @@ const schema = z.object({
     .trim()
     .min(2, { message: "Add meg a neved (legalább 2 karakter)." })
     .max(100, { message: "A név legfeljebb 100 karakter lehet." }),
-  contact: z
-    .string()
-    .trim()
-    .min(5, { message: "Add meg az e-mail címed vagy telefonszámod." })
-    .max(255, { message: "Legfeljebb 255 karakter lehet." })
-    .refine(
-      (v) => /^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$/.test(v) || /^[+()\d][\d\s\-()/]{5,}$/.test(v),
-      { message: "Érvényes e-mail címet vagy telefonszámot adj meg." },
-    ),
+  contact: contactFieldSchema,
   message: z
     .string()
     .trim()
