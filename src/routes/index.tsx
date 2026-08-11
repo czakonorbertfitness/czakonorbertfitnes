@@ -113,13 +113,7 @@ function Index() {
       </section>
 
        <section className="border-y border-border/60 bg-card">
-         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
-           <img
-             src={rowAsset.url}
-             alt="Czakó Norbert személyi edző az edzőteremben"
-             className="aspect-[4/3] w-full rounded-sm object-cover"
-             loading="lazy"
-           />
+         <div className="mx-auto max-w-3xl px-6 py-24">
            <div>
              <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
              <p className="mt-6 leading-relaxed text-muted-foreground">
