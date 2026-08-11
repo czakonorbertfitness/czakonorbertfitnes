@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
 import rowAsset from "@/assets/20260808_091410.jpg.asset.json";
 import { ContactForm } from "@/components/ContactForm";
 import { SiteFooter, SiteHeader, SOCIAL_LINKS } from "@/components/SiteChrome";
@@ -104,8 +103,8 @@ function Index() {
         </div>
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
-            src={heroAsset.url}
-            alt="Czakó Norbert személyi edző a fekvenyomó állványnál"
+            src={rowAsset.url}
+            alt="Czakó Norbert személyi edző az edzőteremben"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
@@ -113,13 +112,7 @@ function Index() {
       </section>
 
        <section className="border-y border-border/60 bg-card">
-         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
-           <img
-             src={rowAsset.url}
-             alt="Czakó Norbert személyi edző az edzőteremben"
-             className="aspect-[4/3] w-full rounded-sm object-cover"
-             loading="lazy"
-           />
+         <div className="mx-auto max-w-3xl px-6 py-24">
            <div>
              <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
              <p className="mt-6 leading-relaxed text-muted-foreground">
