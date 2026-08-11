@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/20260806_081704-2.jpg.asset.json";
-import rowAsset from "@/assets/20260806_080509.jpg.asset.json";
+import rowAsset from "@/assets/20260808_091410.jpg.asset.json";
 import { ContactForm } from "@/components/ContactForm";
 import { SiteFooter, SiteHeader, SOCIAL_LINKS } from "@/components/SiteChrome";
 
@@ -116,7 +116,7 @@ function Index() {
          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
            <img
              src={rowAsset.url}
-             alt="Czakó Norbert a Viking Press gépnél"
+             alt="Czakó Norbert személyi edző az edzőteremben"
              className="aspect-[4/3] w-full rounded-sm object-cover"
              loading="lazy"
            />
