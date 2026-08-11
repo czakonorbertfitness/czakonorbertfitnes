@@ -104,8 +104,8 @@ function Index() {
         </div>
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
-            src={heroAsset.url}
-            alt="Czakó Norbert személyi edző a fekvenyomó állványnál"
+            src={rowAsset.url}
+            alt="Czakó Norbert személyi edző az edzőteremben"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
