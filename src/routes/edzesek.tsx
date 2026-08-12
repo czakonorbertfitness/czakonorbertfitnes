@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import trainAsset from "@/assets/20260806_081704.jpg.asset.json";
+import trainAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+
 
 export const Route = createFileRoute("/edzesek")({
   head: () => ({
@@ -52,9 +53,10 @@ function Edzesek() {
         <div className="relative min-h-[300px]">
           <img
             src={trainAsset.url}
-            alt="Czakó Norbert a fekvenyomó állványnál"
+            alt="Czakó Norbert a Viking Press gépnél"
             className="absolute inset-0 h-full w-full object-cover"
           />
+
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         </div>
       </section>
