@@ -114,24 +114,33 @@ function Index() {
 
       </section>
 
-       <section className="border-y border-border/60 bg-card">
-         <div className="mx-auto max-w-3xl px-6 py-24">
-           <div>
-             <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
-             <p className="mt-6 leading-relaxed text-muted-foreground">
-               Jelentősen túlsúlyos voltam egészen érettségiig. Nem kötött le sem a foci, sem pedig
-               a kosárlabda, aztán az érettségi előtt egy évfolyamtársammal találkoztam, aki már
-               járt konditerembe. Elkezdtem vele edzeni, és ahogy láttam a saját átalakulásomat,
-               az motivációt adott minden egyes ismétléshez. Onnantól tudtam, hogy megtaláltam a
-               sportomat.
-             </p>
-             <p className="mt-4 leading-relaxed text-muted-foreground">
-               Kisebb-nagyobb kihagyásokkal ez egészen a mai napig kitart. Edzés nélkül már nem is
-               tudok létezni — annyira a mindennapommá vált.
-             </p>
-           </div>
-         </div>
-       </section>
+        <section className="border-y border-border/60 bg-card">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-16">
+            <div className="relative min-h-[360px] lg:min-h-[520px]">
+              <img
+                src={aboutAsset.url}
+                alt="Czakó Norbert személyi edző az edzőteremben"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent lg:hidden" />
+            </div>
+            <div>
+              <h2 className="font-display text-4xl leading-tight sm:text-5xl">Rólam</h2>
+              <p className="mt-6 leading-relaxed text-muted-foreground">
+                Jelentősen túlsúlyos voltam egészen érettségiig. Nem kötött le sem a foci, sem pedig
+                a kosárlabda, aztán az érettségi előtt egy évfolyamtársammal találkoztam, aki már
+                járt konditerembe. Elkezdtem vele edzeni, és ahogy láttam a saját átalakulásomat,
+                az motivációt adott minden egyes ismétléshez. Onnantól tudtam, hogy megtaláltam a
+                sportomat.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Kisebb-nagyobb kihagyásokkal ez egészen a mai napig kitart. Edzés nélkül már nem is
+                tudok létezni — annyira a mindennapommá vált.
+              </p>
+            </div>
+          </div>
+        </section>
+
 
        <section className="mx-auto max-w-6xl px-6 py-24">
          <h2 className="max-w-xl font-display text-4xl leading-tight sm:text-5xl">
