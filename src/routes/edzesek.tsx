@@ -53,9 +53,10 @@ function Edzesek() {
         <div className="relative min-h-[300px]">
           <img
             src={trainAsset.url}
-            alt="Czakó Norbert a fekvenyomó állványnál"
+            alt="Czakó Norbert a Viking Press gépnél"
             className="absolute inset-0 h-full w-full object-cover"
           />
+
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         </div>
       </section>
