@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import trainAsset from "@/assets/20260806_081704.jpg.asset.json";
+import trainAsset from "@/assets/20260806_080509.jpg.asset.json";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+
 
 export const Route = createFileRoute("/edzesek")({
   head: () => ({
