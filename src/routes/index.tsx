@@ -105,12 +105,13 @@ function Index() {
         </div>
         <div className="relative min-h-[380px] lg:min-h-[640px]">
           <img
-            src={rowAsset.url}
-            alt="Czakó Norbert személyi edző az edzőteremben"
+            src={heroAsset.url}
+            alt="Czakó Norbert a Viking Press gépnél"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r" />
         </div>
+
       </section>
 
        <section className="border-y border-border/60 bg-card">
